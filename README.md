@@ -19,7 +19,7 @@
 </div>
 
 <div style="">
-  <img alt="phone network signal strength viewer on Android" src="https://raw.githubusercontent.com/Eb43/phonesignalstrength/main/Screenshot_20250528-183650.jpg" style="width:600px; display: inline-block; margin-left:30px;"/>
+  <img alt="phone network signal strength viewer on Android" src="https://raw.githubusercontent.com/Eb43/phonesignalstrength/main/Screenshot_20250528-183650.jpg" style="width:900px; display: inline-block; margin-left:30px;"/>
   </div>
   
   <div style="">
