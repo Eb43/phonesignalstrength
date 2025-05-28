@@ -1,0 +1,246 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/batvoltageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Cell Phone Signal Strength:"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appIcon"
+        app:layout_constraintVertical_bias="0.168" />
+
+    <TextView
+        android:id="@+id/temperatureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="📶 -0 dBm 0G"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/batvoltageTextView" />
+
+    <!-- Custom Signal Strength Indicator Container -->
+    <RelativeLayout
+        android:id="@+id/signalIndicatorContainer"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureTextView">
+
+        <!-- Gradient Signal Bar -->
+        <View
+            android:id="@+id/signalGradientBar"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/signal_gradient" />
+
+        <!-- Signal Marker Triangle -->
+        <View
+            android:id="@+id/signalMarker"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/triangle_marker" />
+
+        <!-- dBm Value Text -->
+        <TextView
+            android:id="@+id/dbmValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signalMarker"
+            android:layout_marginTop="5dp"
+            android:text=" XX dBm"
+            android:textColor="#0066FF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/tvSim1Signal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="SIM 1 Signal: N/A"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvSim2Signal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIM 2 Signal: N/A"
+                android:textSize="24sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- RadioGroup for Text Color Selection - moved above exit button -->
+    <!-- SIM Selection RadioGroup -->
+    <RadioGroup
+        android:id="@+id/simSelectionRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signalIndicatorContainer">
+
+        <TextView
+            android:id="@+id/simSelectionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="SIM:"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioSim1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:checked="true"
+            android:text="SIM 1" />
+
+        <RadioButton
+            android:id="@+id/radioSim2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="SIM 2" />
+    </RadioGroup>
+
+
+    <!-- Exit Button - remains the same -->
+    <RadioGroup
+        android:id="@+id/textColorRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/exitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simSelectionRadioGroup"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/editTextText"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_gravity="center_vertical"
+            android:text="Status bar\nicon color:"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:maxLines="2"
+            android:breakStrategy="simple"/>
+
+        <RadioButton
+            android:id="@+id/radioBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:checked="true"
+            android:text="Black\nText" />
+
+        <RadioButton
+            android:id="@+id/radioWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="White\nText" />
+    </RadioGroup>
+
+    <!-- Auto Start CheckBox - remains the same -->
+    <CheckBox
+        android:id="@+id/autostartCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="272dp"
+        android:autoSizeMaxTextSize="15sp"
+        android:autoSizeMinTextSize="5sp"
+        android:autoSizeTextType="uniform"
+        android:text="Enable \n Auto \n Start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.923"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textColorRadioGroup" />
+
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:autoSizeMaxTextSize="27sp"
+        android:autoSizeMinTextSize="8sp"
+        android:autoSizeTextType="uniform"
+        android:background="#BABABA"
+        android:layoutDirection="inherit"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="&#128683; &#9760; ❌ \n Kill app \n &amp; \n Exit"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
