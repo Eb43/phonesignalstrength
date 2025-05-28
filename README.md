@@ -1,9 +1,9 @@
 # 📶 Smartphone Signal Strength Viewer
 
-**Package Name:** `com.cellsignalstrength`
-**Minimum Android Version:** Android 8 (Oreo)
-**Supports Dual SIM Devices**
-**Completely Offline & Lightweight**
+- **Package Name:** `com.cellsignalstrength`
+- **Minimum Android Version:** Android 8 (Oreo)
+- **Supports Dual SIM Devices**
+- **Completely Offline & Lightweight**
 
 💾   Download the Android Phone Signal Strength APK file: [https://github.com/Eb43/phonesignalstrength/blob/main/PhoneSignalStrength.apk](https://github.com/Eb43/phonesignalstrength/blob/main/PhoneSignalStrength.apk)
 ---
