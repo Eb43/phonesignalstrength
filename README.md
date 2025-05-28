@@ -8,6 +8,24 @@
 💾   Download the Android Phone Signal Strength APK file: [https://github.com/Eb43/phonesignalstrength/blob/main/PhoneSignalStrength.apk](https://github.com/Eb43/phonesignalstrength/blob/main/PhoneSignalStrength.apk)
 ---
 
+---
+
+## 👀 Screenshots
+
+<div style="">
+  <img alt="phone network signal strength viewer on Android" src="https://raw.githubusercontent.com/Eb43/phonesignalstrength/main/Screenshot_2025-05-28-19-04-28-077_lockscreen.jpg" style="display: inline-block; margin-left:30px; width: 300px; object-fit: none; object-position: 1% 1%"/>
+
+<img alt="phone network signal strength viewer on Android" src="https://raw.githubusercontent.com/Eb43/phonesignalstrength/main/Screenshot_20250528-183717.jpg" style="width:300px; display: inline-block; margin-left:30px;"/>
+</div>
+
+<div style="">
+  <img alt="phone network signal strength viewer on Android" src="https://raw.githubusercontent.com/Eb43/phonesignalstrength/main/Screenshot_20250528-183650.jpg" style="width:600px; display: inline-block; margin-left:30px;"/>
+  </div>
+  
+  <div style="">
+<img alt="phone network signal strength viewer on Android" src="https://raw.githubusercontent.com/Eb43/phonesignalstrength/main/Screenshot_20250528-183704.jpg" style="width:300px; display: inline-block; margin-left:30px;"/>
+</div>
+
 ## 📝 Overview
 
 **Cell Signal Strength** is a simple yet powerful Android app designed to display real-time cellular signal strength in **dBm (decibel-milliwatts)** — the most accurate and reliable metric for evaluating mobile reception quality. The app visually and numerically represents signal strength and provides user-selectable SIM slot monitoring and status bar customization for maximum usability.
@@ -103,25 +121,6 @@ The user interface design allows for any non tech-profound person to understand 
 2. Open in **Android Studio**.
 3. Build and run on a real Android device (not emulator, due to telephony API restrictions).
 
----
-
-## 👀 Screenshots
-
-<div style="">
-  <img alt="phone network signal strength viewer on Android" src="https://raw.githubusercontent.com/Eb43/phonesignalstrength/main/Screenshot_2025-05-28-19-04-28-077_lockscreen.jpg" style="display: inline-block; margin-left:30px; width: 300px; object-fit: none; object-position: 1% 1%"/>
-
-<img alt="phone network signal strength viewer on Android" src="https://raw.githubusercontent.com/Eb43/phonesignalstrength/main/Screenshot_20250528-183717.jpg" style="width:300px; display: inline-block; margin-left:30px;"/>
-</div>
-
-<div style="">
-  <img alt="phone network signal strength viewer on Android" src="https://raw.githubusercontent.com/Eb43/phonesignalstrength/main/Screenshot_20250528-183650.jpg" style="width:300px; display: inline-block; margin-left:30px;"/>
-  </div>
-  
-  <div style="">
-<img alt="phone network signal strength viewer on Android" src="https://raw.githubusercontent.com/Eb43/phonesignalstrength/main/Screenshot_20250528-183704.jpg" style="width:300px; display: inline-block; margin-left:30px;"/>
-</div>
-
----
 
 ---
 
